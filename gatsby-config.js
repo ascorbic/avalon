@@ -12,6 +12,9 @@ module.exports = {
     description: "A Gatsby Starter for building homepages with Contentful",
   },
   plugins: [
+    // {
+    //   resolve: require.resolve(`./plugins/gatsby-plugin-merlin`),
+    // },
     {
       resolve: "gatsby-source-contentful",
       options: {
