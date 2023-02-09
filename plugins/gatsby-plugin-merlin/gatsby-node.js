@@ -6,7 +6,11 @@ exports.sourceNodes = async ({
   createContentDigest,
   cache,
 }) => {
-  const { ledgerExists } = await synchronize({
+  if (!process.env.SITE_AUTH_JWT) {
+    console.log("SITE_AUTH_JWT is set")
+    return
+  }
+  const result = await synchronize({
     siteId: "ba44531c-b84e-478d-9d08-65da49f478e3", // should be a site ID for a Gatsby Cloud site
     gatsbySitePath: process.cwd(), // should be an absolute path to a Gatsby site on disk
     cache, // needs cache.get and cache.set methods
@@ -16,5 +20,5 @@ exports.sourceNodes = async ({
       // it's a Gatsby core redux action which was emitted in Merlin and stored in GCS
     },
   })
-  console.log({ ledgerExists })
+  console.log(result)
 }
