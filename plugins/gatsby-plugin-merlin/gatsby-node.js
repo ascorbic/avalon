@@ -11,7 +11,7 @@ exports.sourceNodes = async ({
     return
   }
   const result = await synchronize({
-    siteId: "ba44531c-b84e-478d-9d08-65da49f478e3", // should be a site ID for a Gatsby Cloud site
+    siteId: process.env.GATSBY_SITE_ID, // should be a site ID for a Gatsby Cloud site
     gatsbySitePath: process.cwd(), // should be an absolute path to a Gatsby site on disk
     cache, // needs cache.get and cache.set methods
     handleAction: (action) => {
