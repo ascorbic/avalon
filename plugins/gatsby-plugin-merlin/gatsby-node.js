@@ -1,0 +1,24 @@
+const { synchronize } = require("@gatsby-cloud-pkg/merlin-synchronizer")
+
+exports.sourceNodes = async ({
+  actions,
+  createNodeId,
+  createContentDigest,
+  cache,
+}) => {
+  if (!process.env.SITE_AUTH_JWT) {
+    console.log("SITE_AUTH_JWT is set")
+    return
+  }
+  const result = await synchronize({
+    siteId: process.env.GATSBY_SITE_ID, // should be a site ID for a Gatsby Cloud site
+    gatsbySitePath: process.cwd(), // should be an absolute path to a Gatsby site on disk
+    cache, // needs cache.get and cache.set methods
+    handleAction: (action) => {
+      console.log(action)
+      // do stuff with this action
+      // it's a Gatsby core redux action which was emitted in Merlin and stored in GCS
+    },
+  })
+  console.log(result)
+}

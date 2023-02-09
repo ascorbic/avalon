@@ -13,6 +13,9 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: require.resolve(`./plugins/gatsby-plugin-merlin`),
+    },
+    {
       resolve: "gatsby-source-contentful",
       options: {
         downloadLocal: true,
