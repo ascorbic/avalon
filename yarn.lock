@@ -1700,10 +1700,10 @@
     ufo "^1.0.0"
     unstorage "^1.0.0"
 
-"@netlify/plugin-gatsby@^3.5.2-merlin.0":
-  version "3.5.2-merlin.0"
-  resolved "https://registry.yarnpkg.com/@netlify/plugin-gatsby/-/plugin-gatsby-3.5.2-merlin.0.tgz#00a6a5ac076237f6b9b1475b01eaf61f4a5e3297"
-  integrity sha512-aCVdXiL2qZxMvdWrmsfvV0BSMQeP6jt8GJIuX2J7NS5kVthSGWWt6Xl7tzLW3TSgrNM8NGweBBkpcVBbIhuLxg==
+"@netlify/plugin-gatsby@^3.5.2-merlin.1":
+  version "3.5.2-merlin.1"
+  resolved "https://registry.yarnpkg.com/@netlify/plugin-gatsby/-/plugin-gatsby-3.5.2-merlin.1.tgz#cac991287ecec22783c1b14e4071f72375de8be0"
+  integrity sha512-dpYeN2dIFjSvMB0MV1/dCuVFV0Z+SlCLi0Xr7uHkQofeBaKyJyZaPZ1TbfLeHKMi6i6zn8i1xiHBwAm9fZHw7w==
   dependencies:
     "@gatsby-cloud-pkg/merlin-synchronizer" "^0.3.6"
     "@netlify/functions" "^1.3.0"
