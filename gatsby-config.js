@@ -15,10 +15,14 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        downloadLocal: true,
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-        host: process.env.CONTENTFUL_HOST,
+        downloadLocal: false,
+        useNameForId: true,
+        environment: "master",
+        downloadLocal: false,
+        host: "cdn.contentful.com",
+        pageLimit: 1000,
       },
     },
     "gatsby-plugin-sharp",
